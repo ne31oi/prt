@@ -239,10 +239,16 @@ $blue:  #5ec2e7;
 $dark: #363842;
 $lgray: #f6f6f6;
 
+body{
+  background: url("../img/background.png");
+  background-attachment: fixed
+}
 .border{
   border: 1px solid red;
 }
-
+.tran {
+  transition: 0.3s;
+}
 
 header,footer,section {
   width: 100%;
@@ -253,10 +259,47 @@ header,footer,section {
   display: none;
 }
 header{
+  .social{
+    a{
+      &:hover{
+        background: none;
+        color: $lgray;
+        border: 2px solid $lgray;
+      }
+      float: left;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: $lgray;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 60px;
+      color: $blue;
+      margin-left: 16px;
+      box-sizing: border-box;
+      @extend .tran
+    }
+    float: right;
+    margin: 20px;
+
+
+  }
+  h1{
+    font-size: 50px;
+    line-height: 50px;
+    margin: 0px;
+    font-weight: 700;
+    color: $lgray;
+  }
   background: $blue
 }
+.logo{
+  float: left;
+  margin: 20px;
+}
+
 .form{
-  background: $lgray;
+ // background: $lgray;
 }
 footer{
   background: $dark
