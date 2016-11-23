@@ -230,9 +230,9 @@ table {
 
 td,
 th {
-  padding: 1;
+  padding: 1px;
 }
-// END NORMALIZE////////////////////////////////////
+////////////// END NORMALIZE///////////////////////////////////////
 
 //color
 $blue:  #5ec2e7;
@@ -241,7 +241,8 @@ $lgray: #f6f6f6;
 
 body{
   background: url("../img/background.png");
-  background-attachment: fixed
+  background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 .border{
   border: 1px solid red;
@@ -252,38 +253,53 @@ body{
 
 header,footer,section {
   width: 100%;
-  height: 300px;
+  //height: 300px;
+  overflow: auto;
+  box-sizing: border-box;
 
 }
 .no_visible{
   display: none;
 }
-header{
-  .social{
-    a{
-      &:hover{
-        background: none;
-        color: $lgray;
-        border: 2px solid $lgray;
-      }
-      float: left;
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      background: $lgray;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 60px;
-      color: $blue;
-      margin-left: 16px;
-      box-sizing: border-box;
-      @extend .tran
+.social{
+  a{
+    &:hover{
+      background: none;
+      color: $lgray;
+      border: 2px solid $lgray;
     }
-    float: right;
-    margin: 20px;
-
-
+    float: left;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: $lgray;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    color: $blue;
+    margin-left: 16px;
+    box-sizing: border-box;
+    @extend .tran
   }
+  float: right;
+  margin: 20px;
+}
+.menu{
+  margin: 0 auto;
+  width: 300px;
+  margin-top: -30px;
+  text-align: center;
+
+
+}
+.foot{
+  margin-bottom: -30px;
+}
+
+
+////////HEADER//////////////////
+header{
+
   h1{
     font-size: 50px;
     line-height: 50px;
@@ -297,16 +313,75 @@ header{
   float: left;
   margin: 20px;
 }
+///////SECTIONS////////*//////////////
+
+section{
+  height: 85vh;
+  padding: 20px;
+
+}
 
 .form{
- // background: $lgray;
-}
-footer{
-  background: $dark
+  text-align: center;
+  form{
+    display: inline-block;
+    width: auto;
+    padding: 20px;
+    background: $lgray;
+    border-radius: 5px;
+    height: 280px;
+    margin-top: 10px;
+    box-shadow: 0 3px 8px -2px rgba(55, 60, 60, 0.7);
+    p{
+      text-align: left;
+    }
+    input{
+      @extend .tran;
+    }
+    input[type=text],[type=email],[type=password]{
+      padding: 8px;
+      border: solid 2px darken($lgray, 10%);
+      border-radius: 5px;
+
+      &:focus{
+        border: solid 2px $blue ;
+      }
+    }
+    input[type=submit],[type=reset]{
+      margin-top: 10px;
+      width: 80px;
+      margin-left: 10px;;
+      padding: 2px;
+      float: right;
+      background: #fff;
+      border: solid 2px darken($lgray, 10%);
+      border-radius: 5px;
+      &:hover{
+        background: $blue;
+        border: solid 2px $blue;
+        color: darken($lgray, 70%);
+        //font-weight: bold;
+        box-shadow: 0 3px 8px -2px rgba(55, 200, 60, 0.7);
+      }
+    }
+  }
 }
 .content{
   max-width: 1280px;
   margin: 0 auto;
-  @extend .border
+ // @extend .border;
 
+
+}
+
+
+///////FOOTER//////////////////////
+footer{
+  background: $dark;
+
+  .social{
+    a{
+      color:$dark;
+    }
+  }
 }

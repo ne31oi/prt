@@ -1,19 +1,21 @@
 doctype html
 html(lang="ru")
     head
-        title= pageTitle
+        title.
+            n31
         link(
             rel='stylesheet',
             href='css/font-awesome.min.css')
         link(
             rel='stylesheet',
             href='css/main.css')
-
+        meta(http-equiv="content-type",
+            content='text/html',
+            charset='utf-8')
 
     body
-        header
-            .logo
-                h1 n31
+
+        mixin social()
             .social
                 a(href='#')
                     <i class="fa fa-vk fa-2x" aria-hidden="true"></i>
@@ -21,8 +23,23 @@ html(lang="ru")
                     <i class="fa fa-skype fa-2x" aria-hidden="true"></i>
                 a(href='#')
                     <i class="fa fa-github-alt fa-2x" aria-hidden="true"></i>
+        mixin label_input(name,txt,plh,types)
+            p
+                label(for=name) #{txt}
+                    br
+                input(id=name,required="required",type=types,placeholder=plh)
+        mixin menu(numer)
+            div(class=numer).menu
+                a(href="#form") Form
+                a(href="#form2") Form
 
+        header
+            .content
+                .logo
+                    h1 n31
 
+                +social()
+        +menu(l)
         section.no_visible
             .content
         section.no_visible
@@ -32,8 +49,19 @@ html(lang="ru")
         section.no_visible
             .content
         section.form
+            a(name="form")
             .content
+                form(method="#")
+                    h2 Sign Up
+                    +label_input("uname","User","user667","text")
+                    +label_input("umail","E-mail","user667@gmail.com","email")
+                    +label_input("pass","Password","eg. X8df!90EO","password")
 
+                    input(type="submit",value="Sign Up")
+                    input(type="reset",value="Clear")
+            a(name="form2")
+        +menu("foot")
         footer
-
+            .content
+                +social()
 
