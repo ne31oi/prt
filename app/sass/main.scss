@@ -1,13 +1,8 @@
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
 
-html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -238,7 +233,14 @@ th {
 $blue:  #5ec2e7;
 $dark: #363842;
 $lgray: #f6f6f6;
-
+$red: #ff605f;
+$green: #34cf75;
+.item1{
+  background: $red;
+}
+.item3{
+  background: $green;;
+}
 body{
   background: url("../img/background.png");
   background-attachment: fixed;
@@ -285,15 +287,27 @@ header,footer,section {
   margin: 20px;
 }
 .menu{
-  margin: 0 auto;
-  width: 300px;
-  margin-top: -30px;
-  text-align: center;
-
-
-}
-.foot{
-  margin-bottom: -30px;
+  position: fixed;
+  top: 200px;
+  width: 100px;
+  li{
+    list-style-type: none;
+  }
+  a{
+    @extend .tran;
+    display: block;
+    text-decoration: none;
+    width: 80px;
+    color: #000;
+    font-weight: bold;
+    padding: 1px;
+    padding-left: 10px;
+    &:hover{
+      background: rgba(125,122,122,0.4);
+      color: $lgray;
+    }
+   // background: $green;
+  }
 }
 
 
@@ -316,39 +330,52 @@ header{
 ///////SECTIONS////////*//////////////
 
 section{
-  height: 85vh;
+  min-height: 40vh;
   padding: 20px;
 
 }
 
 .form{
+  //background: $lgray;
   text-align: center;
   form{
     display: inline-block;
-    width: auto;
+    width: 453px;
     padding: 20px;
-    background: $lgray;
+    //background: $lgray;
     border-radius: 5px;
-    height: 280px;
+
     margin-top: 10px;
-    box-shadow: 0 3px 8px -2px rgba(55, 60, 60, 0.7);
+    //box-shadow: 0 3px 8px -2px rgba(55, 60, 60, 0.7);
     p{
       text-align: left;
     }
     input{
       @extend .tran;
     }
-    input[type=text],[type=email],[type=password]{
+    input[type=text],[type=email]{
+      width: 202px;
+    }
+    input[type=text],[type=email],textarea{
       padding: 8px;
       border: solid 2px darken($lgray, 10%);
       border-radius: 5px;
+      margin-bottom: 10px;
 
       &:focus{
-        border: solid 2px $blue ;
+        border: solid 2px $green;
       }
     }
+    textarea{
+      height: 330px;
+      width: 430px;
+      min-width: 430px;
+      min-height: 330px;
+      max-width: 430px;
+      max-height: 330px;
+
+    }
     input[type=submit],[type=reset]{
-      margin-top: 10px;
       width: 80px;
       margin-left: 10px;;
       padding: 2px;
@@ -357,11 +384,11 @@ section{
       border: solid 2px darken($lgray, 10%);
       border-radius: 5px;
       &:hover{
-        background: $blue;
-        border: solid 2px $blue;
+        background: $green;
+        border: solid 2px $green;
         color: darken($lgray, 70%);
-        //font-weight: bold;
-        box-shadow: 0 3px 8px -2px rgba(55, 200, 60, 0.7);
+
+
       }
     }
   }

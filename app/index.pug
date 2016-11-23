@@ -24,14 +24,17 @@ html(lang="ru")
                 a(href='#')
                     <i class="fa fa-github-alt fa-2x" aria-hidden="true"></i>
         mixin label_input(name,txt,plh,types)
-            p
-                label(for=name) #{txt}
-                    br
-                input(id=name,required="required",type=types,placeholder=plh)
-        mixin menu(numer)
-            div(class=numer).menu
-                a(href="#form") Form
-                a(href="#form2") Form
+
+            input(id=name,required,type=types,placeholder=plh)
+        mixin menu()
+            .menu
+                ul
+                    li
+                        a(href="#form") Form
+                    li
+                        a(href="#contact") Contact
+
+
 
         header
             .content
@@ -39,28 +42,34 @@ html(lang="ru")
                     h1 n31
 
                 +social()
-        +menu(l)
-        section.no_visible
+        nav
+            +menu()
+        section
             .content
-        section.no_visible
+        section.item1
             .content
-        section.no_visible
+        section
             .content
-        section.no_visible
+        section.item3
             .content
         section.form
             a(name="form")
             .content
-                form(method="#")
-                    h2 Sign Up
-                    +label_input("uname","User","user667","text")
-                    +label_input("umail","E-mail","user667@gmail.com","email")
-                    +label_input("pass","Password","eg. X8df!90EO","password")
+                a(name="contact")
+                h2 Contact
+                form(method="post",action="#")
+                    +label_input("uname","User","Full name","text")
+                    +label_input("umail","E-mail","Email address","email")
+                    br
+                    textarea(placeholder="Tell me about your project",cols="42",wrap="hard",resize="none")
+                    br
 
-                    input(type="submit",value="Sign Up")
+                    input(type="submit",value="Send")
                     input(type="reset",value="Clear")
-            a(name="form2")
-        +menu("foot")
+
+
+
+
         footer
             .content
                 +social()
