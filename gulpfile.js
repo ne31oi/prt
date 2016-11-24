@@ -33,7 +33,7 @@ gulp.task('sass', function () {
         .pipe(autoprefixer({
             browsers: ['last 10 versions']
         }))
-        .pipe(csso())
+        //.pipe(csso())
         .pipe(gulp.dest('dist/css'));
 });
 

@@ -21,7 +21,7 @@ html(lang="ru")
                     <i class="fa fa-vk fa-2x" aria-hidden="true"></i>
                 a(href='#')
                     <i class="fa fa-skype fa-2x" aria-hidden="true"></i>
-                a(href='#')
+                a(href='https://github.com/ne31oi')
                     <i class="fa fa-github-alt fa-2x" aria-hidden="true"></i>
         mixin label_input(name,txt,plh,types)
 
@@ -30,7 +30,9 @@ html(lang="ru")
             .menu
                 ul
                     li
-                        a(href="#form") Form
+                        a(href="#video") Video
+                    li
+                        a(href="#timeline") Timeline
                     li
                         a(href="#contact") Contact
 
@@ -44,16 +46,62 @@ html(lang="ru")
                 +social()
         nav
             +menu()
-        section
+        section.item_video
+            a(name="video")
+            <div id="video_content" class="is_overlay">
+            <video id="video" autoplay loop preload="auto">
+            <source src="video/mp4/gold.mp4" type="video/mp4"></source>
+            <source src="video/mp4/gold.webm" type="video/webm"></source>
+            </video>
+            </div>
             .content
         section.item1
+            a(name="timeline")
             .content
+                h2  Timeline
+                .time_content
+                    .timeline
+                    .timel
+                        .item.right
+                            span 01.02.2016
+                        .item.left
+                            p Lorem ipsum dolor laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                        .img
+                    .timel
+                        .item.left
+                            span 01.02.2016
+                        .item.right
+                            p Lorem ipsum dolor tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                        .img
+                    .timel
+                        .item.left
+                            span 01.02.2016
+                        .item.right
+                            p.
+                                По умолчанию длинные слова не переносятся, если на то нет явных указаний с помощью дефиса, и начинаются с новой строки.
+
+                                Для того, чтоб
+                        .img
+                    .timel
+                        .item.right
+                            span 01.02.2016
+                        .item.left
+                            p Lorem ipsum dolor tempora laudantium ipsa ad dolor tempora laudantium ipsa ad dolor laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                        .img
+                    .timel
+                        .item.left
+                            span 01.02.2016
+                        .item.right
+                            p Lorem ipsum dolor tempora laudantium ipsa ad dolor tempora laudantium ipsa ad dolor tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                        .img
+
+
         section
             .content
         section.item3
             .content
         section.form
-            a(name="form")
+
             .content
                 a(name="contact")
                 h2 Contact

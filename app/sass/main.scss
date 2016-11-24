@@ -287,6 +287,7 @@ header,footer,section {
   margin: 20px;
 }
 .menu{
+  z-index: 9999;
   position: fixed;
   top: 200px;
   width: 100px;
@@ -302,15 +303,20 @@ header,footer,section {
     font-weight: bold;
     padding: 1px;
     padding-left: 10px;
+    text-shadow: 1px 1px 2px #fff;
     &:hover{
       background: rgba(125,122,122,0.4);
       color: $lgray;
+      text-shadow: 1px 1px 2px #000;
     }
+
    // background: $green;
   }
 }
 
-
+body{
+  min-width:480px;
+}
 ////////HEADER//////////////////
 header{
 
@@ -330,11 +336,131 @@ header{
 ///////SECTIONS////////*//////////////
 
 section{
-  min-height: 40vh;
+  height: auto;
+  overflow: hidden;
   padding: 20px;
+  text-align: center;
 
 }
+h2{
+  margin-bottom: 20px;
+}
+.item_video{
+  height: 40vh;
+}
+.is_overlay{ display: block; width: 100%; height: 100%; }
 
+#video_content {
+  position: absolute;
+  top: -300px; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#video_content > video {
+  position: absolute;
+
+  left: 0;
+
+  min-width: 100%;
+  min-height: 100%;
+  width: auto; height: auto;
+}
+@media (min-aspect-ratio: 16/9) {
+  #video_content > video { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  #video_content > video { width: 300%; left: -100%; }
+}
+
+@supports (object-fit: cover) {
+  #video_content > video {
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+}
+.time_content{
+  .left{
+    position: relative;
+    right: calc(-50% + 300px);
+    float: left;
+    padding: 10px;
+
+    border-radius: 5px;
+
+    span{
+      float: right;
+
+    }
+
+
+  }
+  p{
+    background: $green;
+    border-radius: 5px;
+    margin-bottom:5px;
+    text-align: left;
+    padding: 5px;
+    box-shadow: 0 3px 8px -2px rgba(55, 60, 60, 0.7);
+    width: auto;
+    overflow-wrap: normal;  /* не поддерживает IE, Firefox; является копией word-wrap */
+    word-wrap: normal;
+    word-break: normal;  /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */
+    line-break: auto;  
+
+
+  }
+  .right{
+    padding: 10px;
+    position: relative;
+    right: calc(50% - 300px);
+    float: right;
+    span{
+      float: left;
+    }
+
+
+  }
+  .item{
+
+    width: 250px;
+  }
+  margin: 0 auto;
+  position: relative;
+
+
+  .timel{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+  }
+  .timeline {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: $lgray;
+    left: calc(50% - 1px);
+    z-index: 9;
+
+
+  }
+
+  .img{
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+    background: $red;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 50%;
+    border: solid 2px $lgray;
+    box-shadow: 0 3px 8px -2px rgba(55, 60, 60, 0.7);
+
+  }
+
+}
 .form{
   //background: $lgray;
   text-align: center;
