@@ -1,0 +1,77 @@
+// Common styles of the project
+
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page {
+
+}
+
+.page__wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+* html .page__wrapper {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page__buffer {
+    height: 50px;
+}
+html{
+    background: url("../img/general/background.png");
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    min-width:480px;
+}
+.no_visible{
+    display: none;
+}
+.tran {
+    transition: 0.3s;
+}
+header,footer,section {
+    width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+
+}
+.menu{
+    z-index: 9999;
+    position: fixed;
+    top: 200px;
+    left: 0px;
+    width: 100px;
+    ul{
+        padding: 0;
+    }
+    li{
+        list-style-type: none;
+    }
+    a{
+        @extend .tran;
+        display: block;
+        text-decoration: none;
+        width: 80px;
+        color: #000;
+        font-weight: bold;
+        padding: 1px;
+        padding-left: 10px;
+        text-shadow: 1px 1px 2px #fff;
+        &:hover{
+            background: rgba(125,122,122,0.4);
+            color: $lgray;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        // background: $green;
+    }
+}
+.content {
+    max-width: 1280px;
+    margin: 0 auto;
+}

@@ -1,0 +1,23 @@
+.social{
+    a{
+        &:hover{
+            background: none;
+            color: $lgray;
+            border: 2px solid $lgray;
+        }
+        float: left;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: $lgray;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 60px;
+        color: $blue;
+        margin-left: 16px;
+        box-sizing: border-box;
+        @extend .tran
+    }
+    float: right;
+    margin: 30px;
+}

@@ -1,0 +1,18 @@
+mixin label_input(name,txt,plh,types)
+
+            input(id=name,required,type=types,placeholder=plh)
+mixin section_contact(data)
+     section.form
+
+                .content
+                    a(name="contact")
+                    h2 Contact
+                    form(method="post",action="#")
+                        +label_input("uname","User","Full name","text")
+                        +label_input("umail","E-mail","Email address","email")
+                        br
+                        textarea(placeholder="Tell me about your project",cols="42",wrap="hard",resize="none")
+                        br
+
+                        input(type="submit",value="Send")
+                        input(type="reset",value="Clear")
