@@ -8,11 +8,13 @@ section{
 h2{
     margin-bottom: 20px;
 }
-.item1{
-    background: $red;
+.item1 .content{
+    background:url("../../static/img/general/stars.png"),
+        rgba(255,96,95,0.6);
+
 }
 .item3{
-    background: $green;;
+    background: $green;
 }
 .item_video{
     height: 40vh;
@@ -102,7 +104,7 @@ h2{
 
 }
 .form{
-    //background: $lgray;
+    background: $lgray;
     text-align: center;
     form{
         display: inline-block;
