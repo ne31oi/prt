@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'FortAwesome/Font-Awesome' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData FortAwesome/Font-Awesome
+8 silly fetchOtherPackageData FortAwesome/Font-Awesome
+9 silly cache add args [ 'FortAwesome/Font-Awesome', null ]
+10 verbose cache add spec FortAwesome/Font-Awesome
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'FortAwesome/Font-Awesome',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'FortAwesome/Font-Awesome',
+11 silly cache add   spec: 'github:fortawesome/Font-Awesome',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:fortawesome/Font-Awesome.git',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/fortawesome/Font-Awesome.git',
+11 silly cache add      httpsUrl: 'git+https://github.com/fortawesome/Font-Awesome.git',
+11 silly cache add      gitUrl: 'git://github.com/fortawesome/Font-Awesome.git',
+11 silly cache add      shortcut: 'github:fortawesome/Font-Awesome',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/fortawesome/Font-Awesome/master/package.json' } }
+12 verbose addRemoteGit caching FortAwesome/Font-Awesome
+13 verbose addRemoteGit fortawesome/Font-Awesome is a repository hosted by github
+14 silly tryGitProto attempting to clone git://github.com/fortawesome/Font-Awesome.git
+15 silly tryClone cloning fortawesome/Font-Awesome via git://github.com/fortawesome/Font-Awesome.git
+16 verbose tryClone git-github-com-fortawesome-Font-Awesome-git-2bc8429a not in flight; caching
+17 verbose correctMkdir C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+18 verbose makeDirectory C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes creation not in flight; initializing
+19 verbose makeCacheDir UID & GID are irrelevant on win32
+20 verbose git clone --template=C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/fortawesome/Font-Awesome.git C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\git-github-com-fortawesome-Font-Awesome-git-2bc8429a: undefined
+20 verbose git clone --template=C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/fortawesome/Font-Awesome.git C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\git-github-com-fortawesome-Font-Awesome-git-2bc8429a: undefined
+21 silly tryHTTPS attempting to clone git+https://github.com/fortawesome/Font-Awesome.git
+22 silly tryClone cloning fortawesome/Font-Awesome via git+https://github.com/fortawesome/Font-Awesome.git
+23 verbose tryClone git-https-github-com-fortawesome-Font-Awesome-git-b6024b43 not in flight; caching
+24 verbose correctMkdir C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+25 verbose git clone --template=C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/fortawesome/Font-Awesome.git C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fortawesome-Font-Awesome-git-b6024b43: undefined
+25 verbose git clone --template=C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/fortawesome/Font-Awesome.git C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fortawesome-Font-Awesome-git-b6024b43: undefined
+26 silly trySSH attempting to clone git@github.com:fortawesome/Font-Awesome.git
+27 silly tryClone cloning fortawesome/Font-Awesome via git@github.com:fortawesome/Font-Awesome.git
+28 verbose tryClone git-github-com-fortawesome-Font-Awesome-git-0bda612c not in flight; caching
+29 verbose correctMkdir C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+30 error git clone --template=C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:fortawesome/Font-Awesome.git C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\git-github-com-fortawesome-Font-Awesome-git-0bda612c: undefined
+30 error git clone --template=C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:fortawesome/Font-Awesome.git C:\Users\n31\AppData\Roaming\npm-cache\_git-remotes\git-github-com-fortawesome-Font-Awesome-git-0bda612c: undefined
+31 silly fetchPackageMetaData Error: not found: git
+31 silly fetchPackageMetaData     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+31 silly fetchPackageMetaData     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+31 silly fetchPackageMetaData     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+31 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+31 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+31 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+31 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+31 silly fetchPackageMetaData  error for FortAwesome/Font-Awesome { Error: not found: git
+31 silly fetchPackageMetaData     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+31 silly fetchPackageMetaData     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+31 silly fetchPackageMetaData     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+31 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+31 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+31 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+31 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ENOGIT' }
+32 silly rollbackFailedOptional Starting
+33 silly rollbackFailedOptional Finishing
+34 silly runTopLevelLifecycles Finishing
+35 silly install printInstalled
+36 verbose stack Error: not found: git
+36 verbose stack     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+36 verbose stack     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+36 verbose stack     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+36 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+36 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+36 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+36 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+37 verbose cwd D:\FrontEnd\prt.git
+38 error Windows_NT 6.1.7601
+39 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "FortAwesome/Font-Awesome"
+40 error node v6.9.1
+41 error npm  v3.10.8
+42 error code ENOGIT
+43 error not found: git
+44 error Failed using git.
+44 error This is most likely not a problem with npm itself.
+44 error Please check if you have git installed and in your PATH.
+45 verbose exit [ 1, true ]

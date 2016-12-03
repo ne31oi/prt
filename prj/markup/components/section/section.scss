@@ -1,16 +1,23 @@
 section{
     height: auto;
     overflow: hidden;
-    padding: 20px;
+
     text-align: center;
 
+}
+.content{
+    padding:20px 0px 20px 0px;
+    overflow: hidden;
 }
 h2{
     margin-bottom: 20px;
 }
+.item1 {
+    margin-top: -20px;
+}
 .item1 .content{
-    background:url("../../static/img/general/stars.png"),
-        rgba(255,96,95,0.6);
+    background: $red;
+
 
 }
 .item3{
