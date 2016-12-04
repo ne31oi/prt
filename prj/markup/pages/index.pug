@@ -7,7 +7,10 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/menu/menu.pug
     include ../components/section/section1.pug
+    include ../components/section/skills.pug
     include ../components/section/section_contact.pug
+    include ../components/digram/diagram.pug
+
 
     head
         +head(head.defaults)
@@ -16,7 +19,10 @@ html(class="no-js", lang="ru")
 
         +menu()
         +header()
+
+
         +section1()
+        +skills()
         +section_contact()
         +footer()
 
