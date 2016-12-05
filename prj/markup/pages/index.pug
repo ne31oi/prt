@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
     include ../components/menu/menu.pug
     include ../components/section/section1.pug
     include ../components/section/skills.pug
+    include ../components/section/citat.pug
     include ../components/section/section_contact.pug
     include ../components/digram/diagram.pug
 
@@ -23,9 +24,7 @@ html(class="no-js", lang="ru")
 
         +section1()
         +skills()
-        +skills()
-        +skills()
-        +skills()
+        +citat()
         +section_contact()
         +footer()
 
@@ -34,3 +33,4 @@ html(class="no-js", lang="ru")
 
         //- Main scripts. You can replace it, but I recommend you to leave it here
         script(src='%=static=%js/main%=hash=%%=min=%.js')
+        <script>new WOW().init();</script>

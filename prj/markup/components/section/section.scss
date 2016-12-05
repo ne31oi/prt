@@ -169,3 +169,31 @@ h2{
         }
     }
 }
+.skills{
+    p{
+        margin: 0 auto;
+        width: 803px;
+
+    }
+}
+.citat{
+    background: $red;
+    padding: 30px 0 30px 0;
+    h2{
+        color: $lgray;
+        font-size: 24px;/* Приближение из-за подстановки шрифтов */
+        font-style: italic;
+        line-height: 36px;/* Приближение из-за подстановки шрифтов */
+        max-width: 922px;
+        margin: 0 auto;
+
+
+    }
+    p{
+        color: $lgray;
+        font-size: 16px;/* Приближение из-за подстановки шрифтов */
+        font-style: italic;
+        line-height: 36px;/* Приближение из-за подстановки шрифтов */
+
+    }
+}

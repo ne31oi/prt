@@ -1,4 +1,4 @@
-// Common styles of the project
+@import "plugins/animate.scss";
 
 html, body {
     height: 100%;
@@ -77,4 +77,12 @@ header,footer,section {
 }
 h3{
     margin: 0;
+}
+p{
+
+    color: $dark;
+    font-size: 16px; /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 31px; /* Приближение из-за подстановки шрифтов */
+
 }

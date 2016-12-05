@@ -9,11 +9,11 @@
 }
 .deg{ display: inline-block;
     position: relative;
-    width: 240px;
+    width: 242px;
     height: 260px;
     overflow: hidden;
     margin: 10px;
-    span,p{
+    span,.name_skill{
         width: 240px;
         height: 240px;
         line-height: 240px;
@@ -31,10 +31,14 @@
         color: $dark;
 
     }
-    p{
+    .name_skill{
         font-size: 18px;
-        top:8px;
+        top:18px;
         color: lighten($dark,30%);
+    }
+    .back{
+        stroke: $dark;
+        stroke-width: 15px;
     }
 }
 
