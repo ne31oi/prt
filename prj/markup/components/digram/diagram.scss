@@ -1,31 +1,43 @@
 
 .over-image {
-    stroke: #e36a25;
-    stroke-width: 12px;
-    width: 120px;
-    height: 120px;
+    stroke: $green;
+    stroke-width: 24px;
+    width: 240px;
+    height: 240px;
 
-    transform: rotate(90deg);
+    transform: rotate(270deg);
 }
 .deg{ display: inline-block;
     position: relative;
-    width: 120px;
-    height: 160px;
+    width: 240px;
+    height: 260px;
     overflow: hidden;
-    span{
-        width: 120px;
-        height: 120px;
-        line-height: 120px;
+    margin: 10px;
+    span,p{
+        width: 240px;
+        height: 240px;
+        line-height: 240px;
         position: absolute;
         left: 0;
-        top:0;
+
         text-align: center;
-        font-size: 30px;
+
         font-weight: bold;
 
     }
+    span{
+        font-size: 50px;
+        top:-10px;
+        color: $dark;
+
+    }
+    p{
+        font-size: 18px;
+        top:8px;
+        color: lighten($dark,30%);
+    }
 }
 
-.red{
-    stroke: red;
+.blue{
+    stroke: $blue;
 }
