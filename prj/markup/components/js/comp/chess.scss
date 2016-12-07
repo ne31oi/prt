@@ -13,11 +13,14 @@
         tr:nth-child(even) td:nth-child(2n+1) {
             background:#ccc;
         }
+        tr{
+            height: 9.9%;
+        }
         td{
             border: solid 1px #000;
             box-sizing: border-box;
-            width: 48px;
-            height: 48px;
+            width: 9.9%;
+
         }
         .none{
             background: none !important;
@@ -25,7 +28,21 @@
             font-weight: bold;
 
         }
+        iframe{
+            width: 48px;
+            height: 48px;
+
+        }
+        .rook{
+            width: 100%;
+            height: 100%;
+            background: url("../img/minified-svg/rook.svg");
+            fill: red;
+            //background: red;
+
+        }
         .wc{
+            fill: #fff;
             color: #fff;
             text-shadow: 1px 1px 2px #000;
         }
