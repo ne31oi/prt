@@ -1,8 +1,11 @@
-mixin menu()
+mixin menu(data)
+
+
+
     .menu
         ul.animated.bounceInLeft.wow
             li
-                a(href="#video") Video
+                a(href=data+".html")= data
             li
                 a(href="#timeline") Timeline
             li

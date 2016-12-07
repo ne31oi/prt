@@ -1,0 +1,39 @@
+.pole{
+    width: 450px;
+    height: 450px;
+
+//    background: #ffffff;
+    margin: 0 auto;
+    overflow: hidden;
+    table{
+
+        width: 100%;
+        height: 100%;
+        tr:nth-child(odd) td:nth-child(2n),
+        tr:nth-child(even) td:nth-child(2n+1) {
+            background:#ccc;
+        }
+        td{
+            border: solid 1px #000;
+            box-sizing: border-box;
+            width: 48px;
+            height: 48px;
+        }
+        .none{
+            background: none !important;
+            font-size:22px;
+            font-weight: bold;
+
+        }
+        .wc{
+            color: #fff;
+            text-shadow: 1px 1px 2px #000;
+        }
+        .bc{
+            color: #000;
+            text-shadow: 1px 1px 2px #fff;
+        }
+    }
+
+
+}
