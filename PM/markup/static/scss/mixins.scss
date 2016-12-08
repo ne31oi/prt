@@ -30,8 +30,8 @@
 }
 
 // You can add your own mixins here:
-.tran {
-    transition: .3s;
+@mixin tran($t) {
+    transition: $t+s;
 }
 @mixin sociala($color){
     &:hover{
