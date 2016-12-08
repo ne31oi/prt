@@ -16,19 +16,22 @@ window.onload =function () {
 
     var chess = document.getElementById("chess");
 
-    var letters = 'abcdefgh'.split('');
-//alert(letters[7]);
+    var letters = 'ABCDEFGH'.split('');
+
     var table=document.createElement('table');
-    for(var i=0;i<9;i++){
+    for(var i=0;i<10;i++){
         var tr=document.createElement('tr');
 
-        for(var j=0;j<9;j++){
+        for(var j=0;j<10;j++){
             var td=document.createElement('td');
-            if((i==0)||(j==0)){
+            if((i==0)||(j==0)||(i==9)||(j==9)){
                 td.className="none";
 
-                if(j==0){
-                    td.innerHTML=i;
+                if(j==0||j==9){
+                    if(i!=0&&i!=9){
+                        td.innerHTML=i;
+                    }
+
                 }else{
 
                     td.innerHTML=letters[j-1];
@@ -38,27 +41,40 @@ window.onload =function () {
             }
             else{
                 td.id = letters[j - 1] + i
+                td.className="cell";
                 if(chessmen[i-1][j-1]!=0){
 
                     var img = document.createElement("object");
                     img.type="image/svg+xml";
-                    img.data="static/img/minified-svg/"+chessmen[i-1][j-1]+".svg";
-                    img.id=chessmen[i-1][j-1]+i+j
-                    console.log(img.id)
-
-
-                    td.appendChild(img);
+                    var c;
 
 
                     if(i>4){
-
-                        img.className="wc";
+                        c="w";
 
                     }
                     else{
-                        td.className="bc";
+                        c="b"
                     }
-                }}
+                    img.data="static/img/minified-svg/"+chessmen[i-1][j-1]+c+".svg";
+                    img.id=chessmen[i-1][j-1]+i+j;
+
+
+
+                    td.appendChild(img);
+                }
+                var item = document.createElement("div");
+                item.className="item";
+                var lastid=NaN;
+                item.onclick = function(){
+                    if(lastid!=NaN){
+                    document.getElementById(lastid).className="cell"}
+                    document.getElementById(this.offsetParent.id).className="set"
+                    lastid=this.offsetParent.id;
+                    console.log(lastid)
+                }
+                td.appendChild(item);}
+
 
 
 
@@ -76,4 +92,9 @@ window.onload =function () {
      chess.parentNode.removeChild(chess);
      }, 3000);*/
     //console.log(document.getElementById("rook88").contentDocument.documentElement.firstElementChild.setAttribute("fill","red"))
+}
+
+
+function r() {
+    return (this.offsetParent.id)
 }
