@@ -1,5 +1,5 @@
-// Common styles of the project
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700&subset=cyrillic');
+@import "plugins/angled-edges";
+
 html, body {
     height: 100%;
 
@@ -67,15 +67,20 @@ p{
 /////////////header//////////
 
 header{
-    background: #fff;
+    background: rgba(77,22,45,0.8);
+    @include angled-edge('outside bottom','lower right', rgba(77,22,45,0.8));
 }
 h1{
+
     color: $orange;
     font-weight: 300;
     font-size: 60px;
+
     span{
         color: #000;
         font-weight: 700;
+
+
     }
 }
 ul{

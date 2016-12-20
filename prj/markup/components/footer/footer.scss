@@ -1,5 +1,7 @@
 footer{
     background: $dark;
+    @include angled-edge('outside top','upper right', $dark);
+    overflow: visible;
 
     .social{
         a{
