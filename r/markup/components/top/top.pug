@@ -1,0 +1,28 @@
+include ../header/header.pug
+mixin top(data)
+    section.top
+        +header
+        .top_excerpt
+            h1.top_excerpt_title  NOW IT'S EASY TO FIND YOUR FUTURE HOME
+            div.top_excerpt_subtitle   WITH REALES - REAL ESTATE HTML TEMPLATE
+            a(href="#").btn.btn-dark   Learn More
+        form(action="#" method="post").top_form
+            input.top_form_city
+            select.top_form_bedr
+                option 1
+                option 1
+            select.top_form_bath
+                option 1
+                option 1
+            .top_form_from
+                .dollar $
+                input
+            .top_form_to
+                .dollar $
+                input
+            label.top_form_rent For rent
+                input(type="checkbox").checkbox
+            label.top_form_sale For sale
+                input(type="checkbox").checkbox
+
+            .btn.btn-green

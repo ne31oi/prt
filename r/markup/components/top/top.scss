@@ -1,0 +1,109 @@
+.top{
+    background: url("../../static/img/content/img2.png") center no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+
+    &_excerpt {
+        position: absolute;
+        width: 100%;
+        top: 215px;
+
+        &_title{
+            font-size: 40px;
+            margin-bottom: 18px;
+
+        }
+
+        &_subtitle{
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        &_title,&_subtitle{
+            font-weight: 700;
+            color: $wh;
+            text-shadow: 0 1px 1px #000;
+            text-transform: uppercase;
+        }
+    }
+    &_form{
+        background-color:  rgba(0, 0, 0, 0.5);
+        position: absolute;
+        height: 77px;
+        bottom: 0;
+        line-height: 77px;
+        width: 100%;
+
+
+        &_city,
+        &_bedr,
+        &_bath,
+        &_from,
+        &_to,
+        &_rent,
+        &_sale,
+        .dollar{
+            display: inline-block;
+            font-size: 13px;/* Приближение из-за подстановки шрифтов */
+            font-weight: 400;
+            text-align: left;
+            margin-right: 13px;
+            height: 37px;
+            box-sizing: border-box;
+
+
+
+        }
+
+        &_city{
+            width: 178px;
+        }
+        &_bedr{
+            width: 100px;
+        }
+        &_bath{
+            width: 105px;
+        }
+        &_from,&_to{
+            width: 210px;
+            height: 77px;
+            line-height: 77px;
+            input{
+                border-top-left-radius:0;
+                border-bottom-left-radius: 0;
+                height: 37px;
+                width: 170px;
+                box-sizing: border-box;
+            }
+            .dollar{
+                border: 1px solid #dfdfdf;
+
+                float: left;
+                background-color: #f7f7f7;
+                border-top-left-radius:2px;
+                border-bottom-left-radius: 2px;
+                width: 33px;
+                margin: 0;
+                margin-top: 20px;
+                text-align: center;
+                line-height: 37px;
+                color:
+                    #333333;
+
+
+
+            }
+        }
+        &_rent,&_sale{
+            width: 75px;
+
+        }
+    }
+
+}
+
+.checkbox{
+    width: 18px;
+    height: 18px;
+}
