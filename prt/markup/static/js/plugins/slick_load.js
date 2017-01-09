@@ -13,6 +13,7 @@ $(document).ready(function(){
         slidesToScroll: 1,
         asNavFor: '.slider-for',
         autoplay: true,
+        autoplaySpeed: 9000,
         centerMode: true,
         arrows: false,
         focusOnSelect: true

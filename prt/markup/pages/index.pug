@@ -14,25 +14,21 @@ html(class="no-js", lang="ru")
         section.page__wrapper
 
 
+            .slider-for
+                - for (var i = 1; i <= 6; i++)
+                    div
+                        .slide_item
+                            .block
+                                - for (var j = 1; j <= 10; j++)
+                                    =i
+                                    br
 
 
-            <div class="slider-for">
-                <div><h3>1</h3></div>
-                <div><h3>2</h3></div>
-                <div><h3>3</h3></div>
-                <div><h3>4</h3></div>
-                <div><h3>5</h3></div>
-                <div><h3>6</h3></div>
-            </div>
-            <div class="slider-nav">
-            <div><h3>1</h3></div>
-            <div><h3>2</h3></div>
-            <div><h3>3</h3></div>
-            <div><h3>4</h3></div>
-            <div><h3>5</h3></div>
-            <div><h3>6</h3></div>
-            </div>
-
+            .slider-nav
+                - for (var i = 1; i <= 6; i++)
+                    div.a
+                        h3
+                            =i
 
 
 

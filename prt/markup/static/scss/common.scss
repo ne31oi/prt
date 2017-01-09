@@ -1,5 +1,10 @@
 // Common styles of the project
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background: #1dcaff;
 }
@@ -19,7 +24,8 @@ html, body {
     box-sizing: border-box;
     *{
         text-align: center;
-        border: 1px solid bisque;
+
+
     }
 }
 
