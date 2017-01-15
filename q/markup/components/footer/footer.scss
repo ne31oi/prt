@@ -5,17 +5,34 @@
 .footer{
     color: $dgray;
     .footer_links{
+        padding-top: 60px;
+        padding-bottom: 60px;
 
         .links{
             width: 289px;
-            display: inline-block;
+            display: block;
+            float: left;
             box-sizing: border-box;
+            color: $dgray;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 27px;
             &_title{
                 text-transform: uppercase;
                 color: $dgray;
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 27px;
+                margin-top: 20px;
+            }
+            a{
+                color: $dgray;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 27px;
+                &:hover{
+                    color: $blue;
+                }
             }
         }
     }
@@ -90,7 +107,7 @@
 }
 
 .singup{
-    float: right;
+    float: right    !important;
     width: 270px !important;
     &_email{
         border-radius: 2px;
