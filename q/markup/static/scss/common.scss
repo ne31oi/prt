@@ -1,0 +1,40 @@
+// Common styles of the project
+
+html, body {
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PlayfairDisplay;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.content {
+    width: 1200px;
+    padding: 0 15px 0 15px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: inherit;
+}
+.page {
+
+}
+
+.page__wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    height: 50px;
+}

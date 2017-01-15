@@ -1,0 +1,45 @@
+@media screen and (min-width: 480px) {
+
+    .dip{
+        padding:43px 20px 20px 20px;
+        &_head{
+            h1{
+                font-size: 40px;
+            }
+        }
+        .adv{
+
+            width: 160px;
+            height: 242px;
+            &_1,&_3{
+            display: none;}
+            &_2{
+            display: block;}
+
+
+        }
+        &_date{
+
+            margin: 10px !important;}
+        .photo,.date{
+            width:20%;
+            height: 53px;
+        }
+    }
+    .pages{
+        li{
+            &:first-child{
+                display: inline-block !important;
+                width: 91px;
+                font-family: NotoSans;
+                color:  #848484;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18px;
+                text-align: left;
+            }
+
+        }
+    }
+
+}

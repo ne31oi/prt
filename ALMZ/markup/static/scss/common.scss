@@ -1,0 +1,190 @@
+// Common styles of the project
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Playfair+Display&subset=cyrillic');
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.page {
+
+}
+
+.page__wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    height: 50px;
+}
+
+
+
+.dip{
+    min-width: 320px;
+    padding:25px 5px 5px 5px;
+    width: 100%;
+    box-sizing: border-box;
+    &_head{
+        h1{
+            font-family: 'Playfair Display', serif;
+            color:#010101;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            display: block;
+            float: left;
+            text-transform: uppercase;
+
+        }
+        hr{
+
+            display: block;
+            margin-top: 16px;
+            border: none;
+            height: 2px;
+            width: 40%;
+            float: right;
+            color: #000000;
+            background-color: #000000;
+
+        }
+        @include cf()
+    }
+
+
+    .bigphoto{
+        margin-top: 15px;
+        width: 100%;
+        height: 310px;
+        background: url("../img/content/bp1.png") center;
+
+        background-repeat: no-repeat;
+
+        &_date{
+
+            margin: 6px;
+            width: 80px;
+            height: 53px;
+            background: rgba(240,240,240,0.8);
+
+        }
+    }
+    .photo,.adv,.date{
+        background-size: cover !important;
+        float: left;
+        margin-top: 10px;
+
+    }
+    .photo,.date{
+        width:25%;
+        height: 53px;
+    }
+    .photo{
+        &_1{
+            background: url("../img/content/p1.png");
+        }
+        &_2{
+            background: url("../img/content/p2.png");
+        }
+        &_3{
+            background: url("../img/content/p3.png");
+        }
+        &_4{
+            background: url("../img/content/p4.png");
+        }
+        &_5{
+            background: url("../img/content/p5.png");
+        }
+        &_6{
+            background: url("../img/content/p6.png");
+        }
+    }
+    .adv{
+
+        width: 100%;
+        height: 80px;
+        background-repeat: no-repeat;
+        &_1{
+            background: url("../img/content/adv1.png") center;
+        }
+        &_2{
+            display: none;
+            float: right;
+            background: url("../img/content/adv2.png") top;
+        }
+
+    }
+    .date{
+        font-family: 'Noto Serif', serif;
+        text-align: center;
+        color:  #000000;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        span{
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    .pages{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        float: left;
+        display: block;
+        width: 100%;
+        height: 34px;
+
+        li{
+            display: inline;
+            width: 34px;
+            height: 34px;
+
+            text-align: center;
+            a{
+                display: inline-block;
+                color:  #000000;
+                font-size: 13px;
+                line-height: 34px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+            &:not(:last-child) a{
+                width: 34px;
+                height: 34px;
+            }
+
+            &:last-child a{
+                margin-left: 20px;
+            }
+            &:first-child{
+                display: none;
+            }
+
+
+
+            .active{
+                background: #bebebe;
+                border-radius: 50%;
+                font-weight: 700;
+            }
+            .next{
+
+            }
+
+        }
+    }
+}
+
+@import 'c_480.scss';
+@import 'c_768.scss';
